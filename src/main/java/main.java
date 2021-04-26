@@ -35,7 +35,7 @@ public class main {
                 }
             }
             o=opcion(o);
-            if(o.equals("A") || o.equals("R")) {
+            if(o.equals("A") || o.equals("R") || o.equals("G")) {
                 figuras.limpiar(c);
                 figuras = new Figuras();
             }
