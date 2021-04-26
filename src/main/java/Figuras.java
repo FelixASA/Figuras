@@ -178,7 +178,7 @@ public class Figuras {
 
     }
     public void limpiarTodo() {
-        for(int i=0;i<20;i++){
+        for (int i = 0; i < 20; i++) {
             cuadrados[i].erase();
             circulos[i].erase();
             trapecios[i].erase();
@@ -186,6 +186,41 @@ public class Figuras {
             rectangulos[i].erase();
         }
     }
+    public void cambiarColor(int c,String color) {
+        if(color.equals("M") || color.equals("N") ) {
+            for (int i = 0; i < 20; i++) {
+                switch (c) {
+                    case 0:
+                        colorTodo(color);
+                        break;
+                    case 1:
+                        circulos[i].changeColor(color);
+                        break;
+                    case 2:
+                        triangulos[i].changeColor(color);
+                        break;
+                    case 3:
+                        cuadrados[i].changeColor(color);
+                        break;
+                    case 4:
+                        rectangulos[i].changeColor(color);
+                        break;
+                    case 5:
+                        trapecios[i].changeColor(color);
+                        break;
+                }
+            }
+        }
+    }
+        public void colorTodo(String color) {
+            for (int i = 0; i < 20; i++) {
+                cuadrados[i].changeColor(color);
+                circulos[i].changeColor(color);
+                trapecios[i].changeColor(color);
+                triangulos[i].changeColor(color);
+                rectangulos[i].changeColor(color);
+            }
+        }
 
 }
 
