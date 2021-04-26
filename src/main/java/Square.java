@@ -163,7 +163,7 @@ public class Square
 
     /**
      * Change the color. Valid colors are "red", "yellow", "blue", "green",
-     * "magenta" and "black".
+     * "magenta", "orange" and "black".
      */
     public void changeColor(String newColor)
     {
@@ -178,8 +178,7 @@ public class Square
     {
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();
-            canvas.draw(this, color,
-                    new Rectangle(xPosition, yPosition, size, size));
+            canvas.draw(this, color, new Rectangle(xPosition, yPosition, size, size));
             canvas.wait(10);
         }
     }

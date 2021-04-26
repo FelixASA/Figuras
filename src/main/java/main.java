@@ -4,16 +4,14 @@ public class main {
     public static void main(String[] args) {
         int c = 0;
         String color = "", o = "";
+        Figuras figuras = new Figuras();
         while (!o.equals("F")) {
-            Figuras figuras = new Figuras();
             if (o.equals("M")) {
                 color = "magenta";
                 figuras.cambiarColor(c, color);
-                o=opcion(o);
             } else if (o.equals("N")) {
                 color = "orange";
                 figuras.cambiarColor(c, color);
-                o=opcion(o);
             } else {
                 switch (c) {
                     case 0:
@@ -35,14 +33,18 @@ public class main {
                         figuras.crearTrapecios();
                         break;
                 }
-                o=opcion(o);
+            }
+            o=opcion(o);
+            if(o.equals("A") || o.equals("R")) {
                 figuras.limpiar(c);
+                figuras = new Figuras();
             }
             if (o.equals("A")) c = c + 1;
             else if (o.equals("R")) c = c - 1;
             if (c == 6) c = 0;
             else if (c == -1) c = 5;
         }
+        System.exit(0);
     }
 
     public static String opcion(String o) {
