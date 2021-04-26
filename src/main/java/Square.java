@@ -187,7 +187,7 @@ public class Square
     /**
      * Erase the square on screen.
      */
-    private void erase()
+    public void erase()
     {
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();

@@ -28,7 +28,7 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Picture Demo", 500, 300,
+            canvasSingleton = new Canvas("BlueJ Picture Demo", 750, 400,
                     Color.white);
         }
         canvasSingleton.setVisible(true);
@@ -184,7 +184,7 @@ public class Canvas
     /**
      * Erase the whole canvas. (Does not repaint.)
      */
-    private void erase()
+    public void erase()
     {
         Color original = graphic.getColor();
         graphic.setColor(backgroundColor);
