@@ -4,7 +4,7 @@ public class main {
     public static void main(String[] args) {
         int c = 0;
         String o = "";
-        while (o != "F") {
+        while (!o.equals("F")) {
             Figuras figuras = new Figuras();
             switch (c) {
                 case 0:
